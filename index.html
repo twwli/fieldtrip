@@ -10,15 +10,14 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/timeline.css">
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400,600" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-        <script src="https://use.fontawesome.com/225a66afc9.js"></script>
+         <script src="https://use.fontawesome.com/225a66afc9.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <header>
-            <div id="logo"><h1>Field Trip</h1></div>
+            <!--<div id="logo"><h1>Field Trip</h1></div>-->
+            <div id="logo"><img src="img/logo-brush.svg" alt="" /></div>
             <div id="language-switcher" class="clearfix">
                 <a class="btn-en transition is-active" href="#">en</a> 
                 <a class="btn-de transition" href="#">de</a>
@@ -42,7 +41,7 @@
             
             <section id="about" class="transition">
                 <div class="about-container">
-                    <p><span>Field Trip</span> is an open source documentary about an unconventional place: <a href="" class="">Tempelhof Field</a> - an airstrip in the heart the Berlin metropolis. Field Trip tells the story of what for some is a 300 ha free urban paradise, for others a place of forced labour and for yet others a safe haven. By using the technique of open hypervideo and intense on-site and online community development, Field Trip aims at becoming a living documentary.                  
+                    <p>Field Trip is an open source documentary about an unconventional place: <a href="" class="">Tempelhof Field</a> - an airstrip in the heart the Berlin metropolis. Field Trip tells the story of what for some is a 300 ha free urban paradise, for others a place of forced labour and for yet others a safe haven. By using the technique of open hypervideo and intense on-site and online community development, Field Trip aims at becoming a living documentary.                  
                     </p>                        
                 </div>
             </section>
@@ -180,10 +179,10 @@
         	
         	<!-- Timeline Opener/Closer -->
         	<div id="timeline-opener" class="pause">
-        		<span class="opener">Timeline</span>
+        		<span class="opener strike">Timeline</span>
         	</div>
-        	<div id="timeline-closer" class="transition">
-        		<span class="closer is-hidden strike">Close</span>
+        	<div id="timeline-closer" class="transition is-hidden play">
+        		<span class="closer strike">Close</span>
         	</div>
 
 			<!-- Team Opener/Closer -->
@@ -191,7 +190,7 @@
         		<span class="opener pause strike">Team</span>
         	</div>
         	<div id="team-closer" class="is-hidden">
-        		<span class="closer strike">Close</span>
+        		<span class="closer pause strike">Close</span>
         	</div>
         	
         	<!-- About Opener/Closer -->
@@ -204,7 +203,7 @@
         	
         	<!-- Impressum Opener/Closer -->
         	<div id="impressum-opener" class="transition">
-        		<span class="opener pause strike">Impressum</span>
+        		<span class="opener pause strike">Imprint</span>
         	</div>
         	<div id="impressum-closer" class="is-hidden">
         		<span class="closer strike">Close</span>
@@ -212,16 +211,10 @@
         
         </footer>
         
-        <div id="preload-screen">
-        	<div class="preload-container">
+        <div id="preloader">
+        	<div id="status" class="preload-container">
         		<div class="logo-preload"><img src="img/logo-brush.svg" alt="" /></div>
-
-    		
-        		
-        		
-        		
-        		
-        		
+				<span>A hyperdoc by Eva Stotz & Frédéric Dubois</span>
         	</div>
         </div>
         

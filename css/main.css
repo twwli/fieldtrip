@@ -90,10 +90,6 @@ body {
     transition: color 200ms ease-in;
 }
 
-body.text-is-black {
-	color: #252423;
-}
-
 .cd-main-content {
   min-height: 100%;
   position: relative;
@@ -125,12 +121,9 @@ body.text-is-black {
 
 
 h1 {
-	font-family: 'Permanent Marker', cursive;
-	font-size: 2em;
-	font-weight: normal;
-	line-height: 1;
-	margin: 0;
-	letter-spacing: 2px;
+	font-size: 0;
+	text-indent: -99999px;
+	color: transparent;
 }
 
 h3 {
@@ -243,14 +236,6 @@ p {
 }
 
 
-
-
-
-
-
-
-
-
 /* Video BG */
 
 video { 
@@ -276,10 +261,10 @@ video.is-hidden {
    opacity: .5;
 }
 
-@media screen and (max-device-width: 800px) {
+/*@media screen and (max-device-width: 800px) {
   html { background: url(../img/presite_video.jpg) #252423 no-repeat center center fixed; }
   #bgvid { display: none; }
-}
+}*/
 
 /* Logo */
 
@@ -445,16 +430,19 @@ video.is-hidden {
 }
 
 .icon-list {
-    align-items: center;
-    display: flex;
-    justify-content: center;
     margin-top: 40px;
 }
 
 .icon-list a {
-	font-size: 1em;
+    display: inline-block;
+	font-size: .95em;
 	font-weight: 200;
 	letter-spacing: 2px;
+	margin-bottom: 15px;
+}
+
+.icon-list a i {
+    font-size: 1.25em;
 }
 
 /* Timeline */
@@ -468,7 +456,7 @@ video.is-hidden {
   visibility: hidden;
   /* the secondary navigation is covered by the main element */
   z-index: 1;
- min-height: 400px;
+ min-height: 300px;
  height: 50vh;
   color: #252423; 
   background-color: #fff;
@@ -513,6 +501,7 @@ video.is-hidden {
 	z-index: 10;
 	opacity: 0;
 	visibility: hidden;
+	overflow: scroll !important;
 }
 
 #impressum.is-visible {
@@ -522,23 +511,61 @@ video.is-hidden {
 
 .impressum-container {
 	position: absolute;
-	top: 50%;
+	top: 0;
 	left: 50%;
 	width: 90%;
 	max-width: 900px;
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	-o-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);	
+	padding: 80px 0;
+	-moz-transform: translateX(-50%) translateY(0);
+	-webkit-transform: translateX(-50%) ttranslateY(0);
+	-o-transform: translateX(-50%) translateY(0);
+	-ms-transform: translateX(-50%) translateY(0);
+	transform: translateX(-50%) translateY(0);
+}
+
+.impressum-container h5 {
+    color: #252423;
+    font-size: .85em;
+    margin-top: 1.5em;
+    line-height: 1.45;
+}
+
+.impressum-container span {
+	color: #252423;
+	font-size: 1em;
+	line-height: 1.45;
 }
 
 .impressum-container p {
 	color: #252423;
-	font-size: 1.75em;
-	font-weight: 200;
-	line-height: 1.85;
+	font-size: .75em;
+	line-height: 1.45;
+	opacity: .75;
 }
+
+.impressum-container .divider {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.impressum-container .strike::before {
+    bottom: -4px;
+}
+
+#impressum-closer {
+    color: #252423;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    opacity: .75;
+    z-index: 10;
+}
+
+#impressum-closer:hover {
+    opacity: 1;
+}
+
 
 /* Footer */
 
@@ -614,6 +641,10 @@ video.is-hidden {
     transform: translateX(0) translateY(-50%);
 }
 
+#about-opener.ueber-uns {
+	right: -13px;
+}
+
 #about-opener span, #about-closer span {
 	display: block;
 	margin-top: 3px;
@@ -624,7 +655,7 @@ video.is-hidden {
     transform: rotate(90deg);  
 }
 
-#impressum-opener, #impressum-closer {
+#impressum-opener {
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
@@ -664,7 +695,7 @@ TIMELINE COMPONENTS
 -------------------------------- */
 .cd-horizontal-timeline {
   opacity: 0;
-  padding: 4em 3em;
+  padding: 3em 3em 5em;
   margin: 0 auto;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
@@ -682,7 +713,8 @@ TIMELINE COMPONENTS
 .cd-horizontal-timeline .timeline {
   position: relative;
   height: 200px;
-  width: 90%;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .cd-horizontal-timeline .events-wrapper {
@@ -744,6 +776,7 @@ TIMELINE COMPONENTS
   z-index: 2;
   text-align: center;
   font-size: .75em;
+  line-height: 1.35;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding-bottom: 25px;
@@ -1034,4 +1067,264 @@ TIMELINE COMPONENTS
   }
 }
 
+/* iPhone Landscape */
 
+.iphone-landscape {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    background: rgba(3, 2, 1, .9);
+    color: #fff;
+    text-align: center;
+    z-index: 10000000;
+    display: none;
+}
+
+.iphone-landscape div {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.iphone-landscape div i {
+    display: block;
+    font-size: 4rem;
+}
+
+.iphone-landscape div span {
+    display: block;
+    margin-top: 15px;
+    font-size: .75em;
+    line-height: 1.45;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* MEDIA QUERIES */
+
+/* Laptops */
+@media screen and (max-width: 1280px) {
+
+    .about-container p {
+        font-size: 1.5em;
+        line-height: 2;
+    }
+}
+
+/* Small screens */
+@media screen and (max-width: 900px) {
+
+	.team-column {
+		width: 33.33%;
+	}
+	
+	.team-column.small {
+	    width: 0;
+	}
+}
+
+/* iPads */
+@media screen and (max-width: 780px) {
+
+}
+
+
+/* iPhones */
+@media screen and (max-width: 480px) {
+
+    #logo {
+        top: 10px;
+        left: 10px;
+    }
+    #logo img {
+        width: 100px;
+    }
+    
+    #language-switcher a {
+        padding: 10px 0;
+        width: 34px;
+    }
+    
+    #language-switcher {
+        top: 25px;
+        right: 20px;
+        font-size: .5em;
+    }
+    
+    #team-opener, #team-closer {
+        left: 2px;
+    }
+    
+    #about-opener, #about-closer {
+        right: -2px;
+    }
+    
+    #about-opener.ueber-uns {
+    	right: -17px;
+    }
+    
+    .opener, .closer {
+        font-size: .65em;
+    }
+    
+    #social-network a {
+        font-size: 1.25em;
+        margin-right: 10px;
+    }
+    
+    .about-container p {
+        font-size: .85em;
+        line-height: 1.75;
+    }
+    
+    .about-container {
+        left: 30px;
+        width: 70%;
+        -moz-transform: translateX(0) translateY(-50%);
+        -webkit-transform: translateX(0) translateY(-50%);
+        -o-transform: translateX(0) translateY(-50%);
+        -ms-transform: translateX(0) translateY(-50%);
+        transform: translateX(0) translateY(-50%);
+    }
+    
+    .preload-container {
+        max-width: 230px;
+    }
+    
+    .preload-container img {
+        width: 70%;
+    }
+    
+    .team-container {
+    	bottom: auto;
+    	top: 50%;
+    	height: auto;
+    	-moz-transform: translateX(0) translateY(-50%);
+    	-webkit-transform: translateX(0) translateY(-50%);
+    	-o-transform: translateX(0) translateY(-50%);
+    	-ms-transform: translateX(0) translateY(-50%);
+    	transform: translateX(0) translateY(-50%);
+    }
+    
+    .team-column {
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+    
+    .team-column.small {
+        width: 0;
+    }
+    
+    .square-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        -moz-transform: translateX(0) translateY(0);
+        -webkit-transform: translateX(0) translateY(0);
+        -o-transform: translateX(0) translateY(0);
+        -ms-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
+        padding: 15px 0 5px;
+        border-bottom: 1px solid rgba(255, 255, 255, .05);
+    }
+    
+    .team-first {
+    	border-top: 1px solid rgba(255, 255, 255, .05);
+    }
+    
+    h3 {
+        font-size: .8em;
+    }
+    
+    h4 {
+        font-size: .6em;
+    }
+    
+    .icon-list {
+        margin-top: 20px;
+    }
+    
+    .icon-list a {
+        font-size: .75em;
+        margin-bottom: 10px;
+    }
+    
+    .cd-horizontal-timeline {
+    	padding: 3em 20px 5em;
+    }
+    
+    #event1 {left: 45px !important;}    
+   
+}
+
+
+/* iPhone 6 in portrait & landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { /* STYLES GO HERE */}
+
+/* iPhone 6 in landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) {
+	.iphone-landscape {
+		display: block;
+	}
+}
+
+/* iPhone 6 in portrait */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) { /* STYLES GO HERE */}
+
+/* iPhone 6 Plus in portrait & landscape */
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) { /* STYLES GO HERE */}
+
+/* iPhone 6 Plus in landscape */
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : landscape) { 
+	.iphone-landscape {
+		display: block;
+	}
+}
+
+/* iPhone 6 Plus in portrait */
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait) { /* STYLES GO HERE */ }
+
+/* iPhone 5 & 5S in portrait & landscape */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) { /* STYLES GO HERE */
+
+/* iPhone 5 & 5S in landscape */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) {
+	.iphone-landscape {
+		display: block;
+	}
+}
+
+/* iPhone 5 & 5S in portrait */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) { /* STYLES GO HERE */ }

@@ -1,3 +1,7 @@
+$(function() {
+	FastClick.attach(document.body);
+});
+
 /****************************************************
 WEBSITE PRELOADER
 ****************************************************/
@@ -17,10 +21,10 @@ var vid = document.getElementById("bgvid");
 var pauseButton = document.querySelector(".pause");
 var playButton = document.querySelector(".play");
 
-if (window.matchMedia('(prefers-reduced-motion)').matches) {
+/*if (window.matchMedia('(prefers-reduced-motion)').matches) {
     vid.removeAttribute("autoplay");
     vid.pause();
-}
+} */
 
 function vidFade() {
   vid.classList.add("stopfade");
@@ -106,9 +110,11 @@ $('#about-closer').click(function() {
 /* Impressum Section */
 
 $('#impressum-opener').click(function() {
-    $('#impressum').toggleClass('is-visible');
-    $('#timeline-opener').toggleClass('is-hidden');
-    $('body').toggleClass('text-is-black');
+    $('#impressum').addClass('is-visible');
+});
+
+$('#impressum-closer').click(function() {
+    $('#impressum').removeClass('is-visible');
 });
 
 
@@ -118,7 +124,7 @@ HORIZONTAL TIMELINE
 
 jQuery(document).ready(function($){
 	var timelines = $('.cd-horizontal-timeline'),
-		eventsMinDistance = 90;
+		eventsMinDistance = 85;
 
 	(timelines.length > 0) && initTimeline(timelines);
 

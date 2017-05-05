@@ -360,8 +360,29 @@ video.is-hidden {
 	margin-right: 4px;
 }
 
-.about-container a {
-	opacity: .75;
+.icons {
+	margin-top: 40px;
+}
+
+.icons a {
+	float: left;
+	margin-right: 20px;
+	vertical-align: top;
+	opacity: .5;
+}
+
+.icons a:hover {
+	opacity: 1;
+}
+
+.creative-commons img {
+	width: 70px;
+	height: auto;
+}
+
+.github img {
+	width: 70px;
+	height: auto;
 }
 
 
@@ -1192,6 +1213,18 @@ TIMELINE COMPONENTS
         -o-transform: translateX(0) translateY(-50%);
         -ms-transform: translateX(0) translateY(-50%);
         transform: translateX(0) translateY(-50%);
+    }
+    
+    .icons {
+    	margin-top: 20px;
+    }
+    
+    .icons a {
+    	margin-right: 15px;
+    }
+    
+    .icons a img {
+    	width: 50px;
     }
     
     .preload-container {

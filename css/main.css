@@ -348,30 +348,55 @@ video.is-hidden {
 }
 
 .about-container p {
-	font-size: 1.75em;
+	font-size: 1.65em;
 	font-weight: 200;
 	line-height: 1.85;
 }
 
-.about-container span {
-	font-family: 'Permanent Marker', cursive;
-	font-size: 1.2em;
+.about-footer {
+	margin-top: 50px;
+}
+
+/* Partners Icons */
+
+.partners-icons {
+	float: left;
+}
+
+.partners-icons a,
+.partners-icons span {
+	float: left;
+}
+
+.partners-icons span {
+	margin: 15px 30px 0 0;
+	text-transform: uppercase;
 	letter-spacing: 1px;
-	margin-right: 4px;
+	font-size: .55em;
+	line-height: 1.45;
+	opacity: .5;
 }
 
-.icons {
-	margin-top: 40px;
+.miz img {
+	width: 120px;
+	height: auto;
 }
 
-.icons a {
+/* Github & Creative Commons Icons */
+
+.misc-icons {
+	float: right;
+	margin-top: 17px;
+}
+
+.misc-icons a {
 	float: left;
 	margin-right: 20px;
 	vertical-align: top;
 	opacity: .5;
 }
 
-.icons a:hover {
+.misc-icons a:hover {
 	opacity: 1;
 }
 
@@ -1201,13 +1226,14 @@ TIMELINE COMPONENTS
     }
     
     .about-container p {
-        font-size: .85em;
+        font-size: .8em;
         line-height: 1.75;
+        padding: 0 40px 0 30px;
     }
     
     .about-container {
-        left: 30px;
-        width: 70%;
+        left: 0;
+        width: 100%;
         -moz-transform: translateX(0) translateY(-50%);
         -webkit-transform: translateX(0) translateY(-50%);
         -o-transform: translateX(0) translateY(-50%);
@@ -1215,16 +1241,44 @@ TIMELINE COMPONENTS
         transform: translateX(0) translateY(-50%);
     }
     
-    .icons {
-    	margin-top: 20px;
+    .about-footer {
+    	margin-top: 15px;
     }
     
-    .icons a {
-    	margin-right: 15px;
+    .partners-icons {
+    	margin-left: 30px;
     }
     
-    .icons a img {
-    	width: 50px;
+    .misc-icons {
+    	margin-right: 30px;
+    }
+    
+    .partners-icons a {
+    	float: none;
+    }
+    
+    .partners-icons span {
+    	float: none;
+    	display: block;
+    	margin: 0 0 10px 0;
+    	font-size: .35em;
+    }
+    
+    .logo-miz img {
+    	width: 70px;
+    }
+    
+    .misc-icons {
+    	margin-top: 74px;
+    }
+    
+    .misc-icons a {
+    	margin-right: 0;
+    	margin-left: 15px;
+    }
+    
+    .misc-icons a img {
+    	width: 40px;
     }
     
     .preload-container {

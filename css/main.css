@@ -688,7 +688,7 @@ video.is-hidden {
 }
 
 #about-opener.ueber-uns {
-	right: -56px;
+	right: -27px;
 }
 
 #about-opener span, #about-closer span {
@@ -1213,7 +1213,7 @@ TIMELINE COMPONENTS
     }
     
     #about-opener.ueber-uns {
-    	right: -55px;
+    	right: -31px;
     }
     
     .opener, .closer {

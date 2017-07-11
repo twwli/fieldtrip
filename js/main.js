@@ -124,7 +124,7 @@ HORIZONTAL TIMELINE
 
 jQuery(document).ready(function($){
 	var timelines = $('.cd-horizontal-timeline'),
-		eventsMinDistance = 85;
+		eventsMinDistance = 140;
 
 	(timelines.length > 0) && initTimeline(timelines);
 

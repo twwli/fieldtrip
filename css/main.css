@@ -205,6 +205,7 @@ p {
 	left: 0;
 	z-index: 1;
 	background: rgba(3, 2, 1, .8);
+	display: none;
 }
 
 
@@ -230,9 +231,10 @@ p {
 }
 
 .preload-container span {
-	font-size: .7em;
+	font-size: .65em;
 	text-transform: uppercase;
 	letter-spacing: 3px;
+	margin-left: 60px;
 }
 
 
@@ -491,6 +493,22 @@ video.is-hidden {
     font-size: 1.25em;
 }
 
+.second-raw {
+  position: relative;
+  margin-top: 80px
+}
+
+.second-raw:before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: rgba(255, 255, 255, .75);
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  margin-left: -25px;
+}
+
 /* Timeline */
 
 #timeline {
@@ -534,6 +552,99 @@ video.is-hidden {
   -webkit-overflow-scrolling: touch;
 }
 
+/* FAQs */
+
+#faqs {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #fff;
+	z-index: 10;
+	opacity: 0;
+	visibility: hidden;
+	overflow: scroll !important;
+}
+
+#faqs.is-visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+.faqs-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 90%;
+	max-width: 900px;
+	padding: 80px 0;
+	-moz-transform: translateX(-50%) translateY(0);
+	-webkit-transform: translateX(-50%) ttranslateY(0);
+	-o-transform: translateX(-50%) translateY(0);
+	-ms-transform: translateX(-50%) translateY(0);
+	transform: translateX(-50%) translateY(0);
+}
+
+.faqs-container h4 {
+    color: #252423;
+    font-size: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    line-height: 1.45;
+    letter-spacing: 2px;
+}
+
+.faqs-container h5 {
+    color: #252423;
+    font-size: .85em;
+    margin-top: 1.5em;
+    line-height: 1.45;
+}
+
+.faqs-container span {
+	color: #252423;
+	font-size: 1em;
+	line-height: 1.45;
+}
+
+.faqs-container a {
+	text-decoration: underline;
+}
+
+.faqs-container p b{
+  font-weight: bold;
+}
+
+.faqs-container p {
+	color: #252423;
+	font-size: .75em;
+	line-height: 1.45;
+	opacity: .75;
+}
+
+.faqs-container .divider {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.faqs-container .strike::before {
+    bottom: -4px;
+}
+
+#faqs-closer {
+    color: #252423;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    opacity: .75;
+    z-index: 10;
+}
+
+#faqs-closer:hover {
+    opacity: 1;
+}
 
 /* Impressum */
 
@@ -628,6 +739,7 @@ video.is-hidden {
 	-o-transform: translateX(-50%) translateY(0);
 	-ms-transform: translateX(-50%) translateY(0);
 	transform: translateX(-50%) translateY(0);
+	display: none;
 }
 
 
@@ -705,6 +817,14 @@ video.is-hidden {
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
+	font-size: .75em;
+	opacity: .5;
+}
+
+#faqs-opener {
+	position: fixed;
+	bottom: 30px;
+	right: 120px;
 	font-size: .75em;
 	opacity: .5;
 }
@@ -1289,15 +1409,21 @@ TIMELINE COMPONENTS
         width: 70%;
     }
     
+    #team {
+      overflow: scroll;
+    }
+    
     .team-container {
     	bottom: auto;
-    	top: 50%;
+    	top: auto;
     	height: auto;
-    	-moz-transform: translateX(0) translateY(-50%);
-    	-webkit-transform: translateX(0) translateY(-50%);
-    	-o-transform: translateX(0) translateY(-50%);
-    	-ms-transform: translateX(0) translateY(-50%);
-    	transform: translateX(0) translateY(-50%);
+    	-moz-transform: none;
+    	-webkit-transform: none;
+    	-o-transform: none;
+    	-ms-transform: none;
+    	transform: none;
+    	margin: 90px 0;
+    	padding-bottom: 100px;
     }
     
     .team-column {
@@ -1326,6 +1452,22 @@ TIMELINE COMPONENTS
     .team-first {
     	border-top: 1px solid rgba(255, 255, 255, .05);
     }
+    
+    .second-raw {
+      position: relative;
+      margin-top: 20px
+    }
+    
+    .second-raw:before {
+      content: "";
+      width: 100%;
+      background: rgba(255, 255, 255, .05);
+      position: absolute;
+      top: -15px;
+      left: 0;
+      margin-left: 0;
+    }
+    
     
     h3 {
         font-size: .8em;

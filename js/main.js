@@ -107,6 +107,16 @@ $('#about-closer').click(function() {
     $('#about-closer').addClass('is-hidden');
 });
 
+/* FAQs Section */
+
+$('#faqs-opener').click(function() {
+    $('#faqs').addClass('is-visible');
+});
+
+$('#faqs-closer').click(function() {
+    $('#faqs').removeClass('is-visible');
+});
+
 /* Impressum Section */
 
 $('#impressum-opener').click(function() {

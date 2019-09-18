@@ -18,9 +18,8 @@ VIDEO BG
 ****************************************************/
 
 var vid = document.getElementById("bgvid");
-var pauseButton = document.querySelector(".pause");
-var playButton = document.querySelector(".play");
-
+//var pauseButton = document.querySelector(".pause");
+//var playButton = document.querySelector(".play");
 /*if (window.matchMedia('(prefers-reduced-motion)').matches) {
     vid.removeAttribute("autoplay");
     vid.pause();
@@ -38,7 +37,7 @@ vid.pause();
 vidFade();
 }); 
 
-
+/*
 pauseButton.addEventListener("click", function() {
   vid.classList.toggle("stopfade");
   if (vid.paused) {
@@ -58,6 +57,7 @@ playButton.addEventListener("click", function() {
   }
   
 })
+*/
 
 /****************************************************
 HEADER - OPEN/CLOSE CART
@@ -134,7 +134,7 @@ HORIZONTAL TIMELINE
 
 jQuery(document).ready(function($){
 	var timelines = $('.cd-horizontal-timeline'),
-		eventsMinDistance = 140;
+		eventsMinDistance = 70;
 
 	(timelines.length > 0) && initTimeline(timelines);
 

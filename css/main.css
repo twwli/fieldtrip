@@ -379,9 +379,11 @@ video.is-hidden {
 	opacity: .5;
 }
 
-.miz img {
+.partners-icons img {
 	width: 120px;
-	height: auto;
+	height: 90px;
+	object-fit: contain;
+	padding: 3px 20px 3px 0px;
 }
 
 /* Github & Creative Commons Icons */
@@ -739,7 +741,6 @@ video.is-hidden {
 	-o-transform: translateX(-50%) translateY(0);
 	-ms-transform: translateX(-50%) translateY(0);
 	transform: translateX(-50%) translateY(0);
-	display: none;
 }
 
 
@@ -853,6 +854,49 @@ video.is-hidden {
 	opacity: .75;
 }
 
+
+
+/* Language Version Links */
+
+#versionLinks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#versionLinks a {
+  display: block;
+  background: rgba(0, 0, 0, .25);
+  border: 1px solid rgba(0, 0, 0, .05);
+  padding: 25px;
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  letter-spacing: 2px;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
+  margin-bottom: 20px;
+}
+
+#versionLinks a:hover {
+  background: rgba(0, 0, 0, .35);
+}
+
+#versionLinks a p {
+ line-height: 2em;  
+}
+
+#versionLinks a span {
+  border-bottom: 1px solid #eee;
+}
 
 /* -------------------------------- 
 
@@ -1282,6 +1326,10 @@ TIMELINE COMPONENTS
         font-size: 1.5em;
         line-height: 2;
     }
+    
+    #versionLinks {
+      font-size: 1em;
+    }
 }
 
 /* Small screens */
@@ -1298,7 +1346,11 @@ TIMELINE COMPONENTS
 
 /* iPads */
 @media screen and (max-width: 780px) {
-
+  #versionLinks a {
+    font-size: .75em;
+    min-width: 240px;    
+    padding: 15px 10px;
+  }
 }
 
 
@@ -1335,8 +1387,8 @@ TIMELINE COMPONENTS
     #about-opener.ueber-uns {
     	right: -31px;
     }
-    
-    .opener, .closer {
+        
+    .opener, .closer{
         font-size: .65em;
     }
     

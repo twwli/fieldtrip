@@ -1,5 +1,6 @@
 $(function() {
 	FastClick.attach(document.body);
+
 });
 
 /****************************************************
@@ -47,8 +48,9 @@ pauseButton.addEventListener("click", function() {
   }
   
 })
+*/
 
-playButton.addEventListener("click", function() {
+$('body').one("click", function() {
   vid.classList.toggle("stopfade");
   if (vid.paused) {
     vid.play();
@@ -57,7 +59,6 @@ playButton.addEventListener("click", function() {
   }
   
 })
-*/
 
 /****************************************************
 HEADER - OPEN/CLOSE CART
